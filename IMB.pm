@@ -16,7 +16,7 @@ our @EXPORT = qw(
 	encode_IMB
 );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 require XSLoader;
 XSLoader::load('Business::US::USPS::IMB', $VERSION);
@@ -39,7 +39,7 @@ __END__
 
 =head1 NAME
 
-Business::US::USPS::IMB - Perl Binding for usps4cp
+Business::US::USPS::IMB - Perl Binding for usps4cb
 
 =head1 SYNOPSIS
 
@@ -49,7 +49,7 @@ Business::US::USPS::IMB - Perl Binding for usps4cp
 
 =head1 DESCRIPTION
 
-This module is an interface to usps4cp, providing access to USPS Intelligent Mail Barcode encoder functionality
+This module is an interface to usps4cb, providing access to USPS Intelligent Mail Barcode encoder functionality
 provided by this library. You will need the correct fonts in order to create actual barcodes. This module only
 provides a correctly formatted encoding string, not the actual barcode.
 
@@ -72,22 +72,57 @@ Encoder software libraries, examples and fonts made available by the USPS.
 This function takes a tracking number and routing number as parameters and returns a barcode string and result code.
 If something went wrong, the barcode string will be undef.
 
-Possible result codes and their explaintions are:
+Possible result codes and their explaintions are
 
+=back
+
+=over 4
+
+=item *
 SUCCESS                           0
+
+=item *
 SELFTEST_FAILED                   1
+
+=item *
 BAR_STRING_IS_NULL                2
+
+=item *
 BYTE_CONVERSION_FAILED            3
+
+=item *
 RETRIEVE_TABLE_FAILED             4
+
+=item *
 CODEWORD_CONVERSION_FAILED        5
+
+=item *
 CHARACTER_RANGE_ERROR             6
+
+=item *
 TRACK_STRING_IS_NULL              7
+
+=item *
 ROUTE_STRING_IS_NULL              8
+
+=item *
 TRACK_STRING_BAD_LENGTH           9
+
+=item *
 TRACK_STRING_HAS_INVALID_DATA    10
+
+=item *
 TRACK_STRING_HAS_INVALID_DIGIT2  11
+
+=item *
 ROUTE_STRING_BAD_LENGTH          12
+
+=item *
 ROUTE_STRING_HAS_INVALID_DATA    13
+
+=back
+
+=over 4
 
 For further information on result code descriptions please refer to the USPS documentation on the usps4cb library
 available at the link to Encoder Software and Fonts above.

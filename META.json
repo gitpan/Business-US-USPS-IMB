@@ -1,5 +1,5 @@
 {
-   "abstract" : "Perl Binding for usps4cp",
+   "abstract" : "Perl Binding for usps4cb",
    "author" : [
       "Chris Nighswonger"
    ],
@@ -32,12 +32,10 @@
       },
       "runtime" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.56",
-            "Test::More" : 0,
-            "base" : 0
+            "Test::More" : 0
          }
       }
    },
    "release_status" : "stable",
-   "version" : "0.01"
+   "version" : "0.02"
 }

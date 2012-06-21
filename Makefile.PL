@@ -6,8 +6,6 @@ WriteMakefile(
     NAME              => 'Business::US::USPS::IMB',
     VERSION_FROM      => 'IMB.pm', # finds $VERSION
     PREREQ_PM         => {
-	    'base'	=> 0,
-	    'ExtUtils::MakeMaker'	=>'6.56',
 	    'Test::More'	=> 0,
 	    }, # e.g., Module::Name => 1.1
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
